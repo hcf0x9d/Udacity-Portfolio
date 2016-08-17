@@ -1,0 +1,155 @@
+@import "partials/_definitions.scss";
+@import "partials/_media-queries.scss";
+@import "partials/_normalize.scss";
+@import "partials/_grid.scss";
+
+body{
+	color: $color-grayDk;
+	font: 400 1em/1.2 "Lato", sans-serif;
+}
+
+.header {
+	border-bottom: 5px solid $color-gray;
+	padding: 2em 0;
+
+	&-title {
+		font: 300 4em/1 "Lato", sans-serif;
+		text-align: right;
+		text-transform: uppercase;
+	}
+
+	&-subtitle {
+		font: 400 1.5em/1 "Lato", sans-serif;
+		text-align: right;
+		text-transform: uppercase;
+	}
+}
+
+@include media("<md") {
+	.header {
+		padding: 2em 1rem;
+	}
+}
+
+@include media("<sm") {
+	.header {
+		&-title {
+			font-size: 3em;
+			text-align: center;
+		}
+
+		&-subtitle {
+			font-size: 1.25em;
+			text-align: center;
+		}
+	}
+}
+
+.logo {
+	height: 5.5em;
+
+	&-img {
+		max-height: 100%;
+	}
+}
+
+@include media("<sm") {
+	.logo {
+		height: 3.25em;
+		text-align: center;
+	}
+}
+
+.hero {
+	margin: 40px 0;
+
+	&-picture {
+		display: block;
+	}
+}
+
+.section-title {
+	color: $color-gray;
+	font: 400 2em/1 "Lato", sans-serif;
+	margin-bottom: 20px;
+}
+
+@include media("<md") {
+	.section-title {
+		padding: 0 1rem;
+	}
+}
+@include media("<sm") {
+
+	.section-title {
+		text-align: center;
+	}
+}
+
+.featured {
+	margin-bottom: 40px;
+
+	&-item {
+		list-style-type: none;
+		margin-right: 20px;
+		text-align: center;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+
+		&-target {
+			color: inherit;
+			text-decoration: none;
+			@include transition(color .2s ease);
+
+			&:hover,
+			&:focus {
+				color: $color-blue;
+
+				& .picture-fill {
+					box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+
+		&-title {
+			font: 400 2em/1 "Lato", sans-serif;
+			margin: 0.5em 0;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@include media("<md") {
+	.featured-item-title {
+		font-size: 1.25em;
+		padding: 0 0.5rem;
+	}
+}
+
+@include media("<sm") {
+
+	.featured-item {
+		margin-right: 0;
+		padding: 0 10px 40px 10px;
+	}
+}
+
+.picture-fill {
+	display: block;
+	@include transition(box-shadow .2s ease);
+	width: 100%;
+
+	&-img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.footer {
+	color: $color-gray;
+	font-size: 0.75em;
+	margin: 40px 0 60px 0;
+	text-align: center;
+}

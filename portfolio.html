@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Udacity: Portfolio Project</title>
+
+<!--
+TODO: Meta tags for description, think about OG tags?
+-->
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400">
+	<link rel="stylesheet" href="style/style.css">
+
+</head>
+<!--
+TODO: repress the images at the appropriate viewports.  320, 768, 992, 1200
+-->
+<body>
+	<div class="grid">
+		<header class="header row">
+			<picture class="logo col-3">
+				<img src="image/fuku-seal.svg" alt="" class="logo-img">
+			</picture>
+
+			<div class="col-9">
+				<h1 class="header-title">Jason Fukura</h1>
+				<h2 class="header-subtitle">Web Dev &amp; Bourbon Snob</h2>
+			</div>
+		</header>
+		<main>
+			<div class="row">
+				<picture class="col-12 hero">
+					<source srcset="image/marquee-1200.jpg" media="(min-width: 993px)" />
+					<source srcset="image/marquee-992.jpg" media="(min-width: 769px) and (max-width: 992px)" />
+					<source srcset="image/marquee-768.jpg" media="(min-width: 321px) and (max-width: 768px)" />
+					<source srcset="image/marquee-320.jpg" media="(max-width: 320px)" />
+					<img class="hero-picture"
+						src="image/marquee-1200.jpg"
+						alt="Jason Fukura: User Experience designer and web developer">
+				</picture>
+			</div>
+
+			<section id="gallery">
+				<header class="row">
+					<h2 class="section-title col-12">Featured Work</h2>
+				</header>
+
+				<ul class="featured row">
+					<li class="featured-item col-4">
+						<a href="https://www.behance.net/gallery/23421321/Kelly-Hoppen-MBE-by-apaiser-Landing-Page"
+							class="featured-item-target"
+							target="_blank"
+							aria-label="Visit the Kelly Hoppen Landing Page on Behance">
+
+							<picture class="picture-fill">
+								<source srcset="image/kh-800.jpg" media="(min-width: 321px)" />
+								<source srcset="image/kh-320.jpg" media="(max-width: 320px)" />
+								<img class="picture-fill-img"
+									src="image/kh-800.jpg"
+									alt="The Kelly Hoppen by apaiser landing page">
+							</picture>
+							<h3 class="featured-item-title">Kelly Hoppen by apaiser Landing Page</h3>
+						</a>
+					</li>
+					<li class="featured-item col-4">
+						<a href="https://www.behance.net/gallery/32682789/Dear-Nest-Fix-your-app-(WIP)"
+							class="featured-item-target"
+							target="_blank"
+							aria-label="Visit the Nest project on Behance">
+
+							<picture class="picture-fill">
+								<source srcset="image/nest-800.jpg" media="(min-width: 321px)" />
+								<source srcset="image/nest-320.jpg" media="(max-width: 320px)" />
+								<img class="picture-fill-img"
+									src="image/nest-800.jpg"
+									alt="A solution for the Nest app's UX issues">
+							</picture>
+							<h3 class="featured-item-title">Dear Nest. Fix your app. (WIP)</h3>
+						</a>
+					</li>
+					<li class="featured-item col-4">
+						<a href="https://www.behance.net/gallery/17803467/E-H-Construction-Web-Redesign"
+							class="featured-item-target"
+							target="_blank"
+							aria-label="Visit the E&H Construction Redesign on Behance">
+
+							<picture class="picture-fill">
+								<source srcset="image/ehconstruction-800.jpg" media="(min-width: 321px)" />
+								<source srcset="image/ehconstruction-320.jpg" media="(max-width: 320px)" />
+								<img class="picture-fill-img"
+									src="image/ehconstruction-800.jpg"
+									alt="E&H Construction Website's modern redesign">
+							</picture>
+							<h3 class="featured-item-title">E&amp;H Construction Web Redesign</h3>
+						</a>
+					</li>
+				</ul>
+
+			</section>
+		</main>
+
+		<footer class="footer">
+			<p>made with 🍺 in Kingston, Washington</p>
+		</footer>
+	</div>
+</body>
+</html>
